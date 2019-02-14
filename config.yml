@@ -1,0 +1,17 @@
+#dont change this
+ConfigVersion: 1.0
+#if set to true, the location of a schematic when spawned will be printed to the console
+ShowLocation: true
+#shows additional debug info in console
+debug: false
+#when debug is set to true, these options can be set to true or false to enable additional debug info
+#related to specific parts of the plugin
+
+#shows additional debug info in the console related to various parts of the plugin. Only works if 'debug' is set to 'true'
+debugOptions:
+  debugLootTables: false
+  debugSchematicInfo: false
+  debugSchematicSpawning: false
+  debugMobSpawning: false
+  debugWorldGeneration: false
+  debugMarkers: false

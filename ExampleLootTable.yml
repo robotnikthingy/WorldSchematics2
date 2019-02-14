@@ -1,0 +1,26 @@
+Loot:
+
+  SomeItemNameHere:
+    Type: <item/mythicmobsitem/crackshotitem>
+    Name: <name of mythimobitem or crackshot gun>
+    ID:
+    Data:
+    Display:
+    Lore:
+      -"insert string here"
+    Enchantments:
+    - DAMAGE_ALL:2
+    Chance: <chance of the item>
+    
+    MinAmount:
+    MaxAmount:
+    
+#minimum required info for an item
+  SomeItemNameHere2:
+    Type: item
+    ID:
+    Chance: <chance of the item>
+    
+Options:
+  MaxItems: maximum amount of items to place in the chest
+  MinItems: minimum amount of items to place in the chest

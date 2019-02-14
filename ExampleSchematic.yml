@@ -1,0 +1,82 @@
+#this is an example configuration file for a schematic
+
+#Don't Change this
+ConfigVersion: 1.1
+
+#Whether this schematic will be spawned naturally when new chunks are generated
+enabled: true
+
+
+#determines where to place the schematic. Options are:
+#  ground - the schematic will spawn on the ground
+#  anywhere - schematic can spawn anywhere within range of min and max 
+#  air - schematic will only spawn above ground in the air
+#  underground - schematic will only spawn underground
+place: ground
+
+#chance out of 10000 of the schematic spawning in a new chunk when a new chunk is created.
+#for large structures its recommended to keep this low
+#For something that you want to spawn frequently such as a plant, 1000.0 is recommended
+#for something that you want to spawn very infrequently, similar to a village, 10.0 is recommended
+#for something very rare, 1 or 0.5 is recommended.
+#you may have to experiment to see what works best for you
+chance: 100.0
+
+#offsets the paste position of the schematic in the x,y,z direction when spawned.
+#This can be used to adjust the schematics position.
+#EX: setting y to -10 for a house with 10 block deep basement to make sure the basement is in the ground
+offset:
+  x: 0
+  y: 0
+  z: 0
+
+#these limit where the schematic will spawn height-wise
+#the schematic will not spawn higher than maxY, or lower than minY
+minY: 1
+maxY: 256
+
+#whether to randomly rotate the schematic
+randomrotate: false
+
+#sets whether the schematic will only spawn in certain biomes. If set to false, the schematic
+#will spawn in any biome
+restrictbiomes: false
+
+#if 'restrictbiomes' is set to true, then the schematic will only spawn in these biomes
+#you can find a list of biome names here https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/Biome.html
+biomelist: 
+  - PLAINS
+  - DESERT
+
+#turns the biome whitelist into a blacklists
+biomeblacklistmode: false
+
+#blacklist of blocks which the schematic will not spawn on
+#if WhiteListMode is set to true, then this acts as a whitelist instead
+#Use block names from the Spigot material list found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#if empty then this wont be checked
+blacklist: []
+  
+#example blacklist where schematic will not spawn over lava or water
+#blacklist: 
+#  - STATIONARY_LAVA
+#  - STATIONARY_WATER
+
+#turns the block blacklist into a whitelist
+whitelistmode: false  
+
+#whether to paste air blocks from the schematic. If set to false, air blocks wont be pasted
+pasteair: true
+
+#whether a WorldGuard region will be automatically created around the schematic when it is spawned, and any flags that will be set.
+#NOTE: This does not work yet
+regionSettings:
+  createWorldGuardRegion: false
+  regionFlags: []
+
+#the maximum numbers of times this schematic can be spawned in the world
+#if set to 0, it has no limit
+maxspawns: 0
+
+#the number of times this schematic has spawned in the world. used to keep track of maxspawns
+TimesSpawned: 0

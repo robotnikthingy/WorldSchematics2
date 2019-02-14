@@ -1,0 +1,23 @@
+name: WorldSchematics2
+main: worldschematics.WorldSchematics
+version: 2.8.0a
+author: Robotnikman
+load: POSTWORLD
+description: Spawns .schematics into newly generated chunks.
+website:
+commands:
+  worldschematics:
+    description: The main worldschematics Command
+    permission: worldschematics.admin
+permissions:
+  worldschematics.*:
+    description: Gives access to all worldschematics commands
+    children:
+      worldschematics.admin: true
+  worldschematics.admin:
+    description: Allows you to use worldschematics Admin commands
+    default: op
+  
+depend: [WorldEdit]
+softdepend: [MythicMobs, CrackShot, Magic]
+api-version: 1.13
